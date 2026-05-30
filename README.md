@@ -1,71 +1,88 @@
-# 🧠 TextSense AI
+# DocuSense AI
 
-AI-Powered News & Text Classification System
+AI-Powered Document Classification System
 
-## 📌 Overview
+## Overview
 
-TextSense AI is a Natural Language Processing (NLP) application that classifies news articles and text into five categories:
+DocuSense AI is a Machine Learning and Natural Language Processing (NLP) application that classifies documents and text into five categories:
 
-* 💼 Business
-* 🎭 Entertainment
-* 🏛 Politics
-* ⚽ Sports
-* 💻 Technology
-
-The project uses TF-IDF Vectorization and Machine Learning models to accurately predict the category of a given text.
-
----
-
-## 🚀 Features
-
-* Real-time text classification
-* Interactive Streamlit web application
-* TF-IDF text feature extraction
-* Multiple ML model comparison
-* Clean and user-friendly interface
-
----
-
-## 📊 Dataset
-
-BBC News Dataset
-
-* 2225 news articles
-* 5 categories
 * Business
 * Entertainment
 * Politics
-* Sports
+* Sport
+* Technology
+
+The system uses TF-IDF Vectorization and Logistic Regression to analyze document content and predict the most relevant category.
+
+---
+
+## Features
+
+* Text Classification
+* PDF Document Upload
+* TXT File Upload
+* Confidence Score Prediction
+* Category Probability Visualization
+* Low Confidence Warning System
+* Interactive Streamlit Web Application
+* Real-Time Document Analysis
+
+---
+
+## Dataset
+
+**BBC News Dataset**
+
+* 2225 Documents
+* 5 Categories
+
+Categories:
+
+* Business
+* Entertainment
+* Politics
+* Sport
 * Technology
 
 ---
 
-## 🤖 Machine Learning Models
+## Machine Learning Pipeline
+
+### Text Preprocessing
+
+* Data Cleaning
+* Stop Word Removal
+* TF-IDF Vectorization
+
+### Models Evaluated
 
 | Model                   | Accuracy |
 | ----------------------- | -------- |
 | Multinomial Naive Bayes | 96.40%   |
 | Logistic Regression     | 97.08%   |
 
-### Best Model
+### Selected Model
 
-Logistic Regression (97.08%)
+**Logistic Regression**
+
+Accuracy: **97.08%**
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * Python
 * Pandas
-* Scikit-learn
+* Scikit-Learn
 * Streamlit
 * Joblib
+* PyPDF2
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-TextSense-AI
+DocuSense-AI
 
 ├── app.py
 
@@ -75,24 +92,58 @@ TextSense-AI
 
 ├── vectorizer.pkl
 
+├── logo.png
+
+├── requirements.txt
+
 ├── README.md
 
 └── bbc/
 
 ---
 
-## ▶️ Run Locally
+## How It Works
 
-Install dependencies:
+1. Enter text manually or upload a TXT/PDF document.
+2. The document is transformed using TF-IDF Vectorization.
+3. Logistic Regression predicts the category.
+4. Confidence score and probability distribution are displayed.
+5. The result is visualized through charts and tables.
 
-pip install pandas scikit-learn streamlit joblib
+---
 
-Run:
+## Run Locally
+
+Install Dependencies:
+
+pip install -r requirements.txt
+
+Run Application:
 
 streamlit run app.py
 
 ---
 
-## 🎯 Result
+## Live Demo
 
-Successfully classified news articles into five categories with a best accuracy of 97.08% using Logistic Regression and TF-IDF Vectorization.
+https://docusense-ai-agop.streamlit.app/
+
+---
+
+## Results
+
+* Best Accuracy: 97.08%
+* Logistic Regression Selected
+* PDF & TXT Document Classification Supported
+* Confidence-Based Predictions
+* Interactive Visualization Dashboard
+
+---
+
+## Future Improvements
+
+* Batch Document Classification
+* CSV Upload Support
+* Prediction History
+* Enhanced Dashboard Analytics
+* Additional Document Categories
